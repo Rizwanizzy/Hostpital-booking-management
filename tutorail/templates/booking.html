@@ -6,9 +6,9 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Make an Appoinment</h1>
+    <h1 class="text-center text-primary">Make an Appoinment</h1>
     <hr>
-    <div class="container w-25 my-5 " style="margin-left:10rem">
+    <div class="container-fluid my-5 p-3" style="margin-left:10%; width:25rem">
         <form method="POST">
             {% csrf_token %}
             {{form|crispy}}

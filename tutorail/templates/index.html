@@ -9,7 +9,7 @@
 
 {% load static %}
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-dark slide mb-2" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -18,7 +18,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
       <img src="{% static 'images/car1.jpg' %}" class="d-block w-100" alt="...">
-      <
+
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="{% static 'images/car2.jpg' %}" class="d-block w-100" alt="...">
@@ -39,6 +39,9 @@
   </button>
 </div>
 
+<div class="container" style="margin-bottom:10rem">
+  <img src="{% static 'images/patients.jpg' %}" height="270rem" width="100%">
+</div>
 
 
 {% endblock %}
