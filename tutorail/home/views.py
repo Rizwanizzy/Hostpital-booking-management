@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import departments, doctors, booking
+from .forms import BookingForm
 
 
 # Create your views here.
@@ -13,16 +15,30 @@ def about(request):
 
 
 def booking(request):
-    return render(request, 'booking.html',)
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+    form = BookingForm()
+    dict_form = {
+        'form': form
+    }
+    return render(request, 'booking.html', dict_form)
 
 
 def contact(request):
     return render(request, 'contact.html')
 
 
-def doctors(request):
-    return render(request, 'doctors.html')
+def doctor(request):
+    dict_doc = {
+        'doctors': doctors.objects.all()
+    }
+    return render(request, 'doctor.html', dict_doc)
 
 
 def department(request):
-    return render(request, 'department.html')
+    dict_dept = {
+        'dept': departments.objects.all()
+    }
+    return render(request, 'department.html', dict_dept)
