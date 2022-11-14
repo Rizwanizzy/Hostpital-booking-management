@@ -10,7 +10,7 @@
     <div class="container text-center" style="margin-bottom:6rem">
     {% for d in doctors %}
         <div class="card mx-3 my-5" style="width: 18rem;display:inline-block;">
-            <img class="card-img-top" src="{{d.doc_image.url}}" alt="Card image cap">
+            <img class="card-img-top" style="width:177px;height:175px" src="{{d.doc_image.url}}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Dr.{{d.doc_name}}</h5>
                 <p class="card-text">{{d.doc_spec}}</p>
