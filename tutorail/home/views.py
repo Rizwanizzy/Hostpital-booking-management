@@ -24,6 +24,7 @@ def book(request):
             doc = request.POST['doc_name']
             Dr = doctors.objects.get(pk=doc)
             sid = 'AC2daf97d087da75d0d9677317d68d4ef1'
+            #auth_token is temperory , it should be updated from twilio account when run this program
             auth_token = 'b2bcd513be49e4c122cfc9ecf29fc4fb'
             client = Client(sid, auth_token)
             # client.messages.create(body='CITY HOSPITAL:-Your booking is successful for Date:'+date+' with Doctor: '+str(name) , from_='+14254751055', to='str(num)')
