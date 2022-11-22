@@ -13,8 +13,25 @@
             {% csrf_token %}
             {{form|crispy}}
             <br>
-            <button class="btn btn-info mb-4" type="submit" onclick="alert('Booking Confirmed')">Submit</button>
+            <button class="btn btn-info mb-4" type="submit" onclick="alert('Booking Submitted')">Submit</button>
             <br>
+
+            <div class="container">
+              {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                      <div class="alert alert-success">
+                        {{message}}
+                      </div>
+                    {% else %}
+                      <div class="alert alert-danger">
+                        {{message}}
+                      </div>
+                    {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+
         </form>
     </div>
 {% endblock %}
