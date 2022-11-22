@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import departments, doctors, booking
 from .forms import BookingForm
+from twilio.rest import Client
 
 
 # Create your views here.
@@ -14,14 +14,28 @@ def about(request):
     return render(request, 'about.html')
 
 
-def booking(request):
+def book(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
+            num = request.POST['p_phone']
+            date = request.POST['booking_date']
+            doc = request.POST['doc_name']
+            name = doctors.objects.get(pk=doc)
+            sid = 'AC2daf97d087da75d0d9677317d68d4ef1'
+            auth_token = 'b2bcd513be49e4c122cfc9ecf29fc4fb'
+            client = Client(sid, auth_token)
+            #client.messages.create(body='CITY HOSPITAL:-Your booking is successful for Date:'+date+' with Doctor: '+str(name) , from_='+14254751055', to='str(num)')
+            client.messages.create(
+                body='CITY HOSPITAL:-Your booking is successful for Date:' + date + ' with Doctor: ' + str(name),
+                from_='+14254751055', to='+919037166884')
+            print('phone number:', num, 'booked:', date, 'doctor name:', name)
             form.save()
     form = BookingForm()
+
     dict_form = {
-        'form': form
+        'form': form,
+
     }
     return render(request, 'booking.html', dict_form)
 
