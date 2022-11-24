@@ -5,12 +5,147 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="text-center text-info">Department page</h1>
-    <hr>
-    {% for d in dept %}
-    <div class="container text-center text-white p-3 my-5 mx-auto" style="width:65%;background-color:#5ba68e">
-        <h2>{{d.dept_name}}</h2>
-        <p style="color:white">{{d.dept_description}}</p>
+<!--//news-grids-->
+  <section class="w3l-news-sec">
+    <div class="news-mainhny py-5">
+      <div class="container text-center py-lg-3">
+        <div class="title-content text-center mb-lg-5 mb-4">
+          <h6 class="sub-titlehny">Our Services</h6>
+          <h3 class="hny-title">
+            Our Departments</h3>
+          <div class="separatorhny"></div>
+        </div>
+      </div>
+      <div class="owl-news owl-carousel owl-theme">
+        {% for d in dept %}
+        <div class="item">
+          <a class="nav-link" href="{% url 'department' %}#dept">
+          <div class="news-img position-relative">
+            <a href="{% url 'department' %}#dept"><img src="{{d.dept_image.url}}" style="width:650px;height:350px" class="img-fluid" alt="news image"></a>
+            <div class="title-wrap">
+              <a href="{% url 'department' %}#dept">
+                <h4 class="title">{{d.dept_name}}</h4>
+              </a>
+              <a href="{% url 'department' %}#dept" class="text-right"><span class="fa fa-arrow-right"></span></a>
+            </div>
+          </div></a>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
+  </section>
+  <!--//news-grids-->
+    <!--/services-->
+  <section class="w3l-services1">
+    <div id="content-with-photo4-block" class="py-5">
+      <div class="container py-md-5 py-3">
+        <div class="cwp4-two row">
+          <div class="cwp4-text col-lg-6">
+            <h6 class="sub-titlehny">Services</h6>
+            <h3 class="hny-title">We are give the best Health services</h3>
+            <div class="separatorhny"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud.
+            </p>
+
+            <ul class="cont-4">
+              <li><span class="fa fa-check"></span>Lorem ipsum dolor sit amet</li>
+              <li><span class="fa fa-check"></span>Consectetur adipisicingelit </li>
+              <li><span class="fa fa-check"></span>Lorem ipsum dolor sit amet</li>
+              <li><span class="fa fa-check"></span>Consectetur adipisicingelit</li>
+            </ul>
+          </div>
+          <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">
+            <img src="static/images/7.jpg" class="img-curve img-fluid" alt="" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--//services-->
+    <!--/w3l-services3-->
+    <section class="w3l-content-6 py-5">
+      <div class="content-6-mian py-lg-5 py-md-4">
+        <div class="container">
+          <div class="content-info-in row">
+            <div class="content-gd col-lg-5">
+              <h6 class="sub-titlehny">Our Skills</h6>
+              <h3 class="hny-title two mb-4">We Are Always Health Give Of Best Service</h3>
+              <div class="separatorhny"></div>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, odit! Perspiciatis et
+                consequuntur non, modi quo mollitia labore laborum voluptas quia officiis fugit soluta molestias
+                quaerat sapiente sunt.
+              </p>
+            </div>
+            <div class="content-gd col-lg-6 offset-lg-1">
+              <div class="progress-info">
+                <h6 class="progress-tittle">Expert Doctors</h6>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="80"
+                    aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress-info">
+                <h6 class="progress-tittle">Advanced Equipments
+                </h6>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%" aria-valuenow="95"
+                    aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress-info">
+                <h6 class="progress-tittle">Healthy Living Program</h6>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 55%" aria-valuenow="55"
+                    aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress-info mb-0">
+                <h6 class="progress-tittle">Health Care</h6>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="80"
+                    aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//w3l-services3-->
+  <!--/w3l-services2-->
+  <div class="w3l-services2 py-5" id="dept">
+    <div class="container py-xl-5 py-3">
+      <div class="title-content">
+        <h6 class="sub-titlehny">Some More Features</h6>
+        <h3 class="hny-title">What We Provide</h3>
+        <div class="separatorhny"></div>
+      </div>
+      <div class="row features mt-4">
+        {% for d in dept %}
+        <div class="col-lg-4 col-md-6 feature-grid">
+          <a href="#url">
+          </a>
+          <div class="feature-body" style="background-image:url({{d.dept_image.url}});width:360px;height:250px">
+            <div class="feature-info mt-4"><a href="#url">
+                <h3 class="feature-titel mb-2">{{d.dept_name}}</h3>
+                <p class="feature-text">{{d.dept_description|truncatewords:15}}
+                </p>
+              </a><a href="{% url 'department' %}#dept" class="read mt-4 d-block"> Read More</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+    </div>
+  </div>
+  <!--//w3l-services2-->
 {% endblock %}

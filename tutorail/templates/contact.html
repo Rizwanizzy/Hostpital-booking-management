@@ -5,101 +5,76 @@
 {% endblock %}
 
 {% block body %}
-<section class="container" style="margin-bottom:13rem">
+ <!--/contact-->
+  <section class="w3l-contact-11 pt-5">
+    <div class="contacts-main pt-lg-5 pt-3">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Contact</h6>
+        <h3 class="hny-title mb-0">We’re Here to Help You</h3>
+        <p class="mb-md-5 mb-4">Have some suggestions or just want to say hi? Contact us:</p>
+    </div>
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form action="" method="" class="contact-form">
+                <div class="form-top-left">
 
-    <div class="container-fluid" style="width:65%">
-    <!--Section heading-->
-    <h1 class="h1-responsive text-info font-weight-bold text-center ">Contact us</h1>
-    <!--Section description-->
-    <hr>
-    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-        a matter of hours to help you.</p>
+                  <input type="text" name="w3lName" id="w3lName" placeholder="Name" required="">
 
-    <div class="row" >
+                  <input type="email" name="w3lSender" id="w3lSender" placeholder="Email*"
+                    required="">
 
-        <!--Grid column-->
-        <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Your name</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Your email</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
+                  <input type="text" name="w3lSubject" id="w3lName" placeholder="Subject"
+                    required="">
 
                 </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
-                        </div>
-                    </div>
+                <div class="form-top-righ">
+                  <textarea name="w3lMessage" id="w3lMessage" placeholder="Message*"
+                    required=""></textarea>
                 </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-
-            </form>
-            <br>
-            <div class="text-center text-md-left">
-                <a class="btn btn-info" >Send</a>
+                <div class="form-submit text-right">
+                    <button type="submit" class="btn btn-style btn-primary">Submit Message</button>
+                  </div>
+              </form>
             </div>
-            <div class="status"></div>
+
+          </div>
         </div>
-        <!--Grid column-->
+      </div>
+      <div class="contant11-top-bg mt-4">
+        <div class="container pb-lg-5">
+          <div class="d-grid contact py-lg-5 py-4">
+            <div class="contact-info-left d-grid text-left">
+              <div class="contact-info">
+                <span class="fa fa-map-o" aria-hidden="true"></span>
+                <h4>Visit Us Daily:</h4>
+                <p class="mb-2">New York
+                  United States, LY-90814 Hill Station 2nd Street.</p>
 
-        <!--Grid column-->
-        <div class="col-md-3 text-center">
-            <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>San Francisco, CA 94126, USA</p>
-                </li>
+              </div>
+              <div class="contact-info">
+                <span class="fa fa-phone" aria-hidden="true"></span>
+                <h4>Phone Us 24/7:</h4>
+                <p class="mb-2 conp"> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></p>
+                <p class="conp"> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></p>
+              </div>
+              <div class="contact-info">
+                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                <h4>Mail Us 24/7:</h4>
+                <p class="mb-2 conp"><a href="mailto:Preventive@email.com" class="email">Preventive@email.com</a></p>
+                <p class="conp"><a href="mailto:Preventive@email.com" class="email">Preventive@email.com</a></p>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
-                </li>
-
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>contact@cityhospital.com</p>
-                </li>
-            </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--Grid column-->
-
-    </div>
-    </div>
-</section>
-<!--Section: Contact v.2-->
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001161.424489281!2d-78.01909140705047!3d42.72866436845163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1570786994395!5m2!1sen!2sin"
+          frameborder="0" allowfullscreen=""></iframe>
+      </div>
+  </section>
+  <!--//contact-->
 {% endblock %}

@@ -9,39 +9,224 @@
 
 {% load static %}
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+
+<!--/grids-->
+  <section class="w3l-grids-3 py-5" id="about">
+    <div class="container py-md-5 py-3">
+      <div class="row bottom-ab-grids align-items-center">
+
+        <div class="col-lg-6 bottom-ab-left">
+          <h6 class="sub-titlehny">Trust Us</h6>
+          <h3 class="hny-title">Caring for the growing needs of our community.</h3>
+          <div class="separatorhny"></div>
+          <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio voluptatem
+            tenetur consequatur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+            Nulla mollis dapibus nunc, ut rhoncus
+            turpis sodales quis. </p>
+          <a href="{% url 'about' %}" class="btn btn-style btn-primary mt-4">Read More</a>
+        </div>
+        <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-5 pl-lg-4">
+          <img src="static/images/2.jpg" alt="" class="img-fluid">
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--//grids-->
+  <!--/features-->
+  <section class="w3l-ab-features py-5">
+    <div class="container py-md-5 py-3">
+      <div class="row features-w3pvt-main" id="features">
+        <div class="col-lg-4 col-md-6 feature-gird">
+          <div class="row features-hny-inner-gd">
+            <div class="col-md-2 col-2 featured_grid_left">
+              <div class="icon-hnynumber">
+                <span class="hnynumber">01</span>
+              </div>
+            </div>
+            <div class="col-md-10 col-10 featured_grid_right_info">
+              <h4><a class="link-hny" href="#url">Qualified Doctors</a></h4>
+              <p>Lorem ipsum dolor sit amet elit consec tetur adipisi elit.,Vestibulum ante ipsum primis in faucibus
+                orci luctus et ultrices posuere cubilia Curae rem!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 feature-gird mt-md-0 mt-4">
+          <div class="row features-hny-inner-gd">
+            <div class="col-md-2 col-2 featured_grid_left">
+              <div class="icon-hnynumber">
+                <span class="hnynumber">02</span>
+              </div>
+            </div>
+            <div class="col-md-10 col-10 featured_grid_right_info">
+              <h4><a class="link-hny" href="#url">24 Hour Service</a></h4>
+              <p>Lorem ipsum dolor sit amet elit consec tetur adipisi elit.,Vestibulum ante ipsum primis in faucibus
+                orci luctus et ultrices posuere cubilia Curae rem!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 feature-gird mt-lg-0 mt-md-5 mt-4">
+          <div class="row features-hny-inner-gd">
+            <div class="col-md-2 col-2 featured_grid_left">
+              <div class="icon-hnynumber">
+                <span class="hnynumber">03</span>
+              </div>
+            </div>
+            <div class="col-md-10 col-10 featured_grid_right_info">
+              <h4><a class="link-hny" href="#url">
+                  We Are Here For You</a></h4>
+              <p>Lorem ipsum dolor sit amet elit consec tetur adipisi elit.,Vestibulum ante ipsum primis in faucibus
+                orci luctus et ultrices posuere cubilia Curae rem!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//features-->
+  <!-- middle -->
+  <div class="w3l-middle py-5">
+    <div class="container py-xl-5 py-lg-3">
+      <div class="welcome-left py-3">
+        <h6 class="sub-titlehny">Trusted Care.</h6>
+        <h4>The right choice for your health care needs.</h4>
+        <div class="separatorhny"></div>
+        <p class="pr-lg-5">Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. </p>
+        <div class="buttons mt-5">
+          <a href="{% url 'about' %}" class="btn btn-white btn-primary mr-2">Read More</a>
+          <a href="{% url 'contact' %}" class="btn btn-style border-btn ml-2">Get a quote</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="{% static 'images/car1.jpg' %}" class="d-block w-100" alt="...">
+  <!-- //middle -->
+  <!--/w3l-cwp4-->
+  <div class="w3l-cwp4-sec py-5">
+    <div class="container py-md-5 py-3">
+      <div class="cwp4-two row align-items-center">
+        <div class="cwp4-image col-lg-6 pr-lg-5">
+          <img src="static/images/6.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="cwp4-text col-lg-6 mt-lg-0 mt-5">
+          <h6 class="sub-titlehny">Choose confidently</h6>
+          <h3 class="hny-title">
+            Caring for our region’s most precious resource</h3>
+          <div class="separatorhny"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
 
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="{% static 'images/car2.jpg' %}" class="d-block w-100" alt="...">
+          <ul class="cont-4 mt-lg-6 mt-md-5 mt-4">
+            <li class="subhny-gd mt-sm-0 mt-4">
+              <span class="fa fa-user-md"> </span>
+              <h4><a class="link-hny" href="#url">
+                  Expert Doctors</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicingelit</p>
 
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'images/car3.jpg' %}" class="d-block w-100" alt="...">
+            </li>
+            <li class="subhny-gd mt-sm-0 mt-4">
+              <span class="fa fa-trophy"> </span>
+              <h4><a class="link-hny" href="#url">
+                  Award Winner</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicingelit</p>
 
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
+
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+  <!--//w3l-grids-->
+  <!-- stats -->
+  <section class="w3l-stats py-lg-0 py-5" id="stats">
+    <div class="gallery-inner container py-lg-0 py-3">
+      <div class="row stats-con">
+        <div class="col-lg-3 col-6 stats_info counter_grid">
+          <span class="fa fa-users"></span>
+          <p class="counter">1100</p>
+          <h4>Expert Doctors</h4>
+        </div>
+        <div class="col-lg-3 col-6 stats_info counter_grid1">
+          <span class="fa fa-laptop"></span>
+          <p class="counter">1020</p>
+          <h4>Health Programs</h4>
+        </div>
+        <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
+          <span class="fa fa-smile-o"></span>
+          <p class="counter">912</p>
+          <h4>Happy Clients</h4>
+        </div>
+        <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
+          <span class="fa fa-trophy"></span>
+          <p class="counter">80</p>
+          <h4>Success Meets</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //stats -->
 
-<div class="">
-  <img src="{% static 'images/health.jpg' %}"width="100%" height="400rem">
-</div>
+  <!-- /blog-posts-->
+  <section id="grids5-block" class="w3l-blogluxe-hny py-5">
+    <div class="container py-md-5">
+      <div class="row grid-view">
+        <div class="col-lg-5 pr-lg-5">
+          <h6 class="sub-titlehny">The Power to Heal</h6>
+          <h3 class="hny-title">The perfect balance between Health & Care.</h3>
+          <div class="separatorhny"></div>
+          <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio voluptatem
+            tenetur consequatur primis. </p>
+          <a href="{% url 'about' %}" class="btn btn-style btn-primary mt-4">Read More</a>
+        </div>
+        <div class="col-lg-7 mt-lg-0 mt-4">
+          <div class="row grids5-info">
+            <div class="col-6">
+              <a href="#" class="zoom">
+                <img src="static/images/s1.jpg" alt="" class="img-fluid" />
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="#" class="zoom">
+                <img src="static/images/s2.jpg" alt="" class="img-fluid" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //blog-Section -->
+
+  <!--/w3l-subscribe-->
+  <section class="w3l-subscribe-content py-5">
+    <div class="container py-md-4 py-3 text-center">
+      <div class="row my-lg-4 mt-4">
+        <div class="col-lg-9 col-md-10 mx-auto">
+          <div class="subscribe mx-auto">
+            <div class="header-section text-center mx-auto">
+              <h6 class="sub-titlehny">Join Us</h6>
+              <h3 class="hny-title">Stay Updated! </h3>
+              <div class="separatorhny"></div>
+              <p class="my-3">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
+                consectetur adipisicing.
+                turpis sodales quis. Integer sit amet mattis quam.</p>
+            </div>
+            <form action="#" method="" class="subscribe-wthree pt-2 mt-5">
+              <div class="d-md-flex flex-wrap subscribe-wthree-field">
+                <input class="form-control" type="email" placeholder="Enter your email..." name="email" required="">
+                <button class="btn btn-style btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//w3l-subscribe-->
 
 
 {% endblock %}
