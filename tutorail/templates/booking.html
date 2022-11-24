@@ -7,39 +7,48 @@
 
 {% block body %}
     <!-- //modal-popup-->
-<section class="w3l-contact-11 pt-5 mb-5">
+<section class="w3l-contact-11 pt-5">
     <div class="contacts-main pt-lg-5 pt-3">
-                  <h1 class="text-center" style="color:#3a0ca3">Make an Appoinment</h1>
-    <hr>
-    <div class="container-fluid my-5 p-3" style="margin:auto; width:30rem">
-        <form method="POST">
-            {% csrf_token %}
-            {{form|crispy}}
-            <br>
-            <div style="display: flex;justify-content:center">
-            <button class="btn mb-4" type="submit" style="background-color:#3a0ca3;color:white">Submit</button>
-            </div>
-            <br>
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Book Here</h6>
+        <h3 class="hny-title mb-0">Make an Appoinment</h3>
+      </div>
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container" style="max-width:550px">
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form method="POST">
+                {% csrf_token %}
+                {{form|crispy}}
+                <br>
+                <div class="form-submit text-right">
+                    <button type="submit" class="btn btn-style btn-primary">Submit</button>
+                </div>
+                <br>
 
-            <div class="container">
-              {% if messages %}
-                {% for message in messages %}
-                    {% if message.tags == 'success' %}
-                      <div class="alert alert-success">
-                        {{message}}
-                      </div>
-                    {% else %}
-                      <div class="alert alert-danger">
-                        {{message}}
-                      </div>
-                    {% endif %}
-                {% endfor %}
-              {% endif %}
+                <div class="container">
+                  {% if messages %}
+                    {% for message in messages %}
+                        {% if message.tags == 'success' %}
+                          <div class="alert alert-success">
+                            {{message}}
+                          </div>
+                        {% else %}
+                          <div class="alert alert-danger">
+                            {{message}}
+                          </div>
+                        {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                </div>
+
+            </form>
             </div>
 
-        </form>
+          </div>
+        </div>
+      </div>
+
     </div>
-                  <!-- //modal-popup-->
-    </div>
-</section>
+  </section>
 {% endblock %}
