@@ -35,8 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
-    'crispy_forms',
+    'home',  # app_name that used in this project
+    'crispy_forms',  # to modify from that created with table
 ]
 
 MIDDLEWARE = [
@@ -54,6 +54,7 @@ ROOT_URLCONF = 'tutorail.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # mentioned all html files directory
         'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -112,6 +113,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# mentioned all static folders directory
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
@@ -119,6 +121,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# setting a path of folder to save images to directory uploads
 MEDIA_ROOT = BASE_DIR / 'uploads'
 MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

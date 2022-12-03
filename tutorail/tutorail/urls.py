@@ -19,6 +19,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+                  # url for admin dashboard
+                  path('admin/', admin.site.urls),
+                  # url mapping to home app urls
+                  path('', include('home.urls')),
+
+              ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)  # to serve images in uploads to our website

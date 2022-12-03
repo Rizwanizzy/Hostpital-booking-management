@@ -18,6 +18,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # path('url',views.views_name,name='used_for_navigation')
     path('', views.index, name='home'),
     path('about/', views.about, name='about'),
     path('booking/', views.book, name='booking'),

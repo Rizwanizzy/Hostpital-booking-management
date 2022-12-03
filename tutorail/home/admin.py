@@ -7,6 +7,7 @@ admin.site.register(departments)
 admin.site.register(doctors)
 
 
+# to display all the fields in booking table with details in admin panel
 class BookingAdmin(admin.ModelAdmin):
     list_display = ('id', 'p_name', 'p_phone', 'p_email', 'doc_name', 'booking_date', 'booked_on')
 

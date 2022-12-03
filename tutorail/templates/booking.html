@@ -1,3 +1,4 @@
+<!--Templete inheritence-->
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
@@ -18,7 +19,9 @@
           <div class="d-grid align-form-map">
             <div class="form-inner-cont">
               <form method="POST">
+<!--            it is used when method="POST" cross site request forgery protection-->
                 {% csrf_token %}
+<!--            BookingForm that is created in forms.py with modified with crispy form-->
                 {{form|crispy}}
                 <br>
                 <div class="form-submit text-right">
